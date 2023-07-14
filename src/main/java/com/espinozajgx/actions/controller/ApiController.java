@@ -16,4 +16,9 @@ public class ApiController {
         return new ResponseEntity<>("I am alive!", HttpStatus.OK);
     }
 
+    @GetMapping(value = "/version", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> version(){
+        return new ResponseEntity<>("The actual version is 1.0.0", HttpStatus.OK);
+    }
+
 }
