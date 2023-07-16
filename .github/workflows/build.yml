@@ -12,8 +12,8 @@ on:
       - master
 jobs:
   #Test's job
-  tests:
-    name: Unit tests
+  unit-test:
+    #name: Unit tests
     #Run on Ubuntu using the latest version
     runs-on: ubuntu-latest
     #Job's steps

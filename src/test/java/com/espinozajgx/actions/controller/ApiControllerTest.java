@@ -21,7 +21,7 @@ class ApiControllerTest {
 
     @Test
     @DisplayName("HealhCkeck response message 'I am alive' and http 200")
-    public void testHealhCheck() throws Exception {
+    void testHealhCheck() throws Exception {
        MvcResult mvcResult = mockMvc.perform(get("/api/v1/"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$").value("I am alive!"))
