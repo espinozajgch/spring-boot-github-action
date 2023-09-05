@@ -44,7 +44,7 @@ class ApiControllerTest {
         System.out.println("El resultado del módulo entre " + a + " y " + b + " es: " + result + " y su division es:" + (a/b));
 
         String number = "1234567";
-        String name = "Jose Espinoza";
+        String name = "Jose G. Espinoza Ch.";
         System.out.println("Ultimo numero es: " + number.substring(number.length()-1));
 
     }
