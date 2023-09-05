@@ -8,6 +8,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -32,6 +34,17 @@ class ApiControllerTest {
 
         assertEquals("I am alive!",
                 mvcResult.getResponse().getContentAsString());
+
+    }
+    @Test
+    void main() {
+        int a = 15;
+        int b = 11;
+        int result = a % b;
+        System.out.println("El resultado del módulo entre " + a + " y " + b + " es: " + result + " y su division es:" + (a/b));
+
+        String number = "1234567";
+        System.out.println("Ultimo numero es: " + number.substring(number.length()-1));
 
     }
 }

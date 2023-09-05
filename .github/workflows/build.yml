@@ -3,14 +3,17 @@ name: CI/CD Pipeline
 on:
   #Manually trigger workflow runs
   workflow_dispatch:
-  #Trigger the workflow on push from the main branch
+  #Trigger the workflow on push from the all brach except main branch and on PR to master
   push:
     branches:
-      - master
+      - '**'
+      - '!master'
   pull_request:
     branches:
       - master
+
 jobs:
+
   #Test's job
   unit-test:
     #name: Unit tests
@@ -37,3 +40,11 @@ jobs:
       #Run Tests
       - name: Run Tests
         run: mvn -B test
+
+  build:
+    if: ${{ github.ref == 'refs/heads/master' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: echo on merging to master
+        run: echo "I'm merging!"
